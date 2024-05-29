@@ -14,12 +14,15 @@ class Review(models.Model):
     reviewed_at = models.DateTimeField(auto_now_add=True)
 
 
+
+# Add 5 point rating system, pagination and filters
 class Course(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     tutor = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     days = models.TextField()
     max_students = models.IntegerField()
+    current_students = models.IntegerField(default=0)
     students = models.ManyToManyField(Enrollment,default=[])
     reviews = models.ManyToManyField(Review,default=[])
 

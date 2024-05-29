@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'skillshare_api',
     'corsheaders',
+    'django_extensions',
 
 ]
 

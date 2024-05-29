@@ -17,8 +17,8 @@ class EnrollmentSerializer(serializers.ModelSerializer):
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    students = EnrollmentSerializer(many=True, read_only=True)
-    reviews = ReviewSerializer(many=True, read_only=True)
+    students = EnrollmentSerializer(many=True,read_only=True)
+    reviews = ReviewSerializer(many=True,read_only=True)
     tutor = UserSerializer(read_only=True)
     class Meta:
         model = Course
@@ -31,7 +31,9 @@ class CourseSerializer(serializers.ModelSerializer):
         
 
     def update(self, instance, validated_data):
-        ...
+        instance = super(CourseSerializer, self).update(instance, validated_data)
+        instance.save()
+        return instance
     
     
 
