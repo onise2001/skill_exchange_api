@@ -5,6 +5,6 @@ from .views import SignUpView
 
 urlpatterns = [
     path('signup/', SignUpView.as_view()),
-    path('token/', TokenObtainPairView.as_view(), name="login/signup"),
+    path('token/', TokenObtainPairView.as_view(), name="login"),
     path('refresh/', TokenRefreshView.as_view()),
 ]

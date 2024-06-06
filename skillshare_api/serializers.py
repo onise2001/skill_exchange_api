@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from users.serializers import UserSerializer
-from .models import Course, Review, Enrollment
+from .models import Course, Review, Enrollment, TutorEnrollment
+from users.models import CustomUser
+from users.serializers import UserSerializer
 
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -37,5 +39,11 @@ class CourseSerializer(serializers.ModelSerializer):
     
     
 
+
+    
+class TutorEnrollmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TutorEnrollment
+        fields = '__all__'
 
     
