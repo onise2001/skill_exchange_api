@@ -91,9 +91,9 @@ This project uses django's JSON Web Tokens for registration and login purposes.
 
 - **Name:** By sending a GET request to this api endpoint, ```/course?name={course_name}```, you will get a list of all courses that have name fields that contain the name provided.
 
-- **Tutor rating:**By sending a GET request to this api endpoint, ```/course?tutor_rating={rating}```, you will get a list of all courses that have tutor who have rating greater or equal to the rating provided.
+- **Tutor rating:** By sending a GET request to this api endpoint, ```/course?tutor_rating={rating}```, you will get a list of all courses that have tutor who have rating greater or equal to the rating provided.
 
-- **Available:**By sending a GET request to this api endpoint, ```/course?available={True or False}```, you will get a list of all courses that are either available or not available depending on your input.
+- **Available:** By sending a GET request to this api endpoint, ```/course?available={True or False}```, you will get a list of all courses that are either available or not available depending on your input.
 
 
 
